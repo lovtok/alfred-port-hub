@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Alfred Godwin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root { --primary: #036830; --bg: #f4f7f6; --card: #ffffff; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg); color: #333; margin: 0; line-height: 1.6; }
+        
+        /* Header Navigation */
+        header {
+            background: var(--card);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        nav a:hover,
+        nav a.active {
+            color: var(--primary);
+        }
+        
+        /* Main Content */
+        main { padding: 40px 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: var(--card); padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h1 { color: var(--primary); display: flex; align-items: center; gap: 10px; border-bottom: 2px solid #eee; padding-bottom: 15px; }
+        h2 { color: var(--primary); font-size: 1.1rem; margin-top: 25px; }
+        p, li { font-size: 0.95rem; color: #555; }
+        .highlight { color: var(--primary); font-weight: 600; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo"><i class="bi bi-house-fill"></i> Home</a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="privacy.html" class="active">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+    <div class="container">
+        <h1><i class="bi bi-shield-lock"></i> Privacy Policy</h1>
+        <p>Your privacy is important to me. This policy explains how I handle information when you visit my portfolio or hire me for your project.</p>
+
+        <h2>1. Information Collected</h2>
+        <p>I collect basic information you provide through contact forms, such as your <span class="highlight">name, email address, and project details</span>. This is used solely to communicate regarding your service request.</p>
+
+        <h2>2. Data Security</h2>
+        <p>As a developer focused on platform integrity, I implement security measures to protect your data. Your information is never sold to third parties.</p>
+
+        <h2>3. Use of Cookies</h2>
+        <p>My website may use small cookies to improve your browsing experience and analyze site traffic via standard web analytics tools.</p>
+
+        <h2>4. Contact</h2>
+        <p>If you have questions about your data, please contact me directly through the "Hire Me" portal.</p>
+        
+        <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+        <p style="text-align: center; font-size: 0.8rem; color: #999;">&copy; 2026 Alfred Godwin</p>
+    </div>
+    </main>
+</body>
+</html>
