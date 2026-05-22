@@ -1,6 +1,85 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
+                <style>
+                    .blinking-alfred {
+                        animation: blink-color 1s infinite;
+                        font-weight: bold;
+                    }
+                    @keyframes blink-color {
+                        0% { color: green; }
+                        50% { color: red; }
+                        100% { color: green; }
+                    }
+                    .wave-signal {
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 48px;
+                        height: 48px;
+                        border-radius: 50%;
+                        background: rgba(0, 200, 0, 0.15);
+                        z-index: 0;
+                        animation: wave-pulse 1.5s infinite cubic-bezier(0.4,0,0.2,1);
+                    }
+                    .user {
+                        position: relative;
+                        display: inline-block;
+                    }
+                    .user i {
+                        position: relative;
+                        z-index: 1;
+                    }
+                    @keyframes wave-pulse {
+                        0% {
+                            transform: translate(-50%, -50%) scale(0.8);
+                            opacity: 0.7;
+                        }
+                        70% {
+                            transform: translate(-50%, -50%) scale(1.3);
+                            opacity: 0.2;
+                        }
+                        100% {
+                            transform: translate(-50%, -50%) scale(1.5);
+                            opacity: 0;
+                        }
+                    }
+                </style>
+                        <!-- Structured Data for SEO and Sitelinks -->
+                        <script type="application/ld+json">
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Organization",
+                            "name": "Alfred Godwin",
+                            "url": "https://alfred-godwin-port-hub.alfredgodwin937.workers.dev/",
+                            "logo": "https://res.cloudinary.com/dmrhe3chc/image/upload/v1774103100/Alfred-thecoder-2_njsayv.png",
+                            "sameAs": [
+                                "https://www.facebook.com/profile.php?id=61579486097220",
+                                "https://x.com/shmorpi_crown",
+                                "https://www.linkedin.com/in/alfred-godwin-328bb5383/"
+                            ],
+                            "contactPoint": {
+                                "@type": "ContactPoint",
+                                "telephone": "+2349137102840",
+                                "contactType": "customer service",
+                                "email": "alfredgodwin937@gmail.com"
+                            }
+                        }
+                        </script>
+                        <script type="application/ld+json">
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "WebSite",
+                            "url": "https://alfred-godwin-port-hub.alfredgodwin937.workers.dev/",
+                            "name": "Alfred Godwin Portfolio",
+                            "potentialAction": {
+                                "@type": "SearchAction",
+                                "target": "https://alfred-godwin-port-hub.alfredgodwin937.workers.dev/?s={search_term_string}",
+                                "query-input": "required name=search_term_string"
+                            }
+                        }
+                        </script>
         <script data-no-optimize="1">
             var litespeed_docref = sessionStorage.getItem("litespeed_docref");
             litespeed_docref && (Object.defineProperty(document, "referrer", {
@@ -11,12 +90,32 @@
             sessionStorage.removeItem("litespeed_docref"));
         </script>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="profile" href="https://gmpg.org/xfn/11">
-        <title>Alfred Godwin | Web Developer & UI/UX Designer</title>
-        <meta name="description" content="Alfred Godwin is a professional web developer and UI/UX designer building modern, fast, and scalable websites and applications.">
-        <meta name="keywords" content="Web Developer, UI/UX Designer, Frontend Developer, Nigeria Developer, Trinidax, Website Designer">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Alfred Godwin - Portfolio | Web Developer & UI/UX Designer | Nigeria</title>
+        <meta name="description" content="Professional web developer and UI/UX designer in Nigeria. I build modern, fast, and scalable websites and applications for businesses and individuals. Portfolio, services, testimonials, and contact.">
+        <meta name="keywords" content="Web Developer, UI/UX Designer, Frontend Developer, Nigeria Developer, Website Designer, Alfred Godwin, Portfolio, Freelance Developer, Responsive Design, Jalingo, Taraba, HTML, CSS, JavaScript, WordPress, PHP, SEO, Branding, Digital Solutions, Mobile Friendly">
         <meta name="author" content="Alfred Godwin">
+        <meta name="robots" content="index, follow">
+        <meta name="language" content="English">
+        <meta name="format-detection" content="telephone=no,email=no,address=no">
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Alfred Godwin - Portfolio | Web Developer & UI/UX Designer | Nigeria">
+        <meta property="og:description" content="Professional web developer and UI/UX designer in Nigeria. I build modern, fast, and scalable websites and applications for businesses and individuals.">
+        <meta property="og:image" content="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774103100/Alfred-thecoder-2_njsayv.png">
+        <meta property="og:url" content="https://alfred-godwin-port-hub.alfredgodwin937.workers.dev/">
+        <meta property="og:site_name" content="Alfred Godwin Portfolio">
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Alfred Godwin - Portfolio | Web Developer & UI/UX Designer | Nigeria">
+        <meta name="twitter:description" content="Professional web developer and UI/UX designer in Nigeria. I build modern, fast, and scalable websites and applications for businesses and individuals.">
+        <meta name="twitter:image" content="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774103100/Alfred-thecoder-2_njsayv.png">
+        <meta name="twitter:site" content="@shmorpi_crown">
+        <meta name="twitter:creator" content="@shmorpi_crown">
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://alfred-godwin-port-hub.alfredgodwin937.workers.dev/">
+        <!-- Favicons and theme color remain below -->
         
         <!-- ============================================
              FAVICON SECTION - UPLOAD YOUR FAVICON HERE
@@ -40,20 +139,60 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <!-- 🔥 OPEN GRAPH (FACEBOOK, LINKEDIN) -->
-        <meta property="og:title" content="Alfred Godwin | Web Developer">
-        <meta property="og:description" content="I build modern, responsive, and scalable websites and applications.">
+        <!-- ========================================== -->
+        <!-- OPEN GRAPH META TAGS (Facebook, LinkedIn, Pinterest) -->
+        <!-- ========================================== -->
+        <meta property="og:title" content="Alfred Godwin | Professional Web Developer & UI/UX Designer">
+        <meta property="og:description" content="Building modern, responsive, and scalable web applications. Specializing in frontend development, UI/UX design, and digital innovation.">
         <meta property="og:image" content="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774024536/circle-header-logo_tuafwz.png">
-        <meta property="og:url" content="https://github.com/lovtok/Alfred-Godwin-Port-Hub.git">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:image:type" content="image/png">
+        <meta property="og:image:alt" content="Alfred Godwin - Web Developer Logo">
+        <meta property="og:url" content="https://alfred-godwin-port-hub.alfredgodwin937.workers.dev/">
         <meta property="og:type" content="website">
-        <!-- 🔥 CANONICAL URL (SEO IMPORTANT) -->
-        <link rel="canonical" href="https://github.com/lovtok/Alfred-Godwin-Port-Hub.git">
-        <!--BOOTSTRAP & ICONSCOUT ICON DIS-->
+        <meta property="og:site_name" content="Alfred Godwin Portfolio">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:locale:alternate" content="en_GB">
+        
+        <!-- LinkedIn Meta Tags -->
+        <meta property="linkedin:title" content="Alfred Godwin | Web Developer & UI/UX Designer">
+        <meta property="linkedin:description" content="Professional web developer and UI/UX designer. Building modern web applications with cutting-edge technologies.">
+        
+        <!-- Pinterest Meta Tags -->
+        <meta property="pinterest:title" content="Alfred Godwin - Web Developer & UI/UX Designer">
+        <meta property="pinterest:media" content="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774024536/circle-header-logo_tuafwz.png">
+        <meta property="pinterest:description" content="Building modern, responsive, and scalable web applications. Professional web developer and UI/UX designer from Nigeria.">
+        
+        <!-- ========================================== -->
+        <!-- TWITTER CARD META TAGS -->
+        <!-- ========================================== -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@alfredgodwin">
+        <meta name="twitter:creator" content="@alfredgodwin">
+        <meta name="twitter:title" content="Alfred Godwin | Web Developer & UI/UX Designer">
+        <meta name="twitter:description" content="Modern web developer specializing in frontend development, UI/UX design, and responsive web applications.">
+        <meta name="twitter:image" content="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774024536/circle-header-logo_tuafwz.png">
+        <meta name="twitter:image:alt" content="Alfred Godwin Portfolio">
+        <meta name="twitter:url" content="https://alfred-godwin-port-hub.alfredgodwin937.workers.dev/">
+        <meta name="twitter:domain" content="alfred-godwin-port-hub.alfredgodwin937.workers.dev">
+        
+        <!-- Additional Social Media Optimization -->
+        <meta name="revisit-after" content="7 days">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="email=no">
+        
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://alfred-godwin-port-hub.alfredgodwin937.workers.dev/">
+        <link rel="alternate" hreflang="en-US" href="https://alfred-godwin-port-hub.alfredgodwin937.workers.dev/">
+        <link rel="alternate" hreflang="en" href="https://alfred-godwin-port-hub.alfredgodwin937.workers.dev/">
+        <!--BOOTSTRAP & ICONSCOUT ICON LIBRARIES-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/solid.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css">
-        <link rel='dns-prefetch' href='//fonts.googleapis.com'/>
+        
         <style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
             img:is([sizes=auto i],[sizes^="auto," i]) {
                 contain-intrinsic-size: 3000px 1500px
@@ -1275,7 +1414,23 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                                                </div>
+                                                <script>
+                                                // Ensure mobile menu opens on hamburger click
+                                                document.addEventListener('DOMContentLoaded', function() {
+                                                    var menuBtn = document.getElementById('menuBtn');
+                                                    if (menuBtn) {
+                                                        menuBtn.addEventListener('click', function(e) {
+                                                            e.preventDefault();
+                                                            var popupMenu = document.querySelector('.popup-mobile-menu');
+                                                            if (popupMenu) {
+                                                                popupMenu.classList.add('menu-open');
+                                                                document.documentElement.style.overflow = 'hidden';
+                                                            }
+                                                        });
+                                                    }
+                                                });
+                                                </script>
                     </div>
                     <ul class="popuptab-area nav nav-tabs" id="popuptab" role="tablist">
                         <li class="nav-item">
@@ -2166,102 +2321,57 @@ Writter</a>
             </div>
         </div>
         <div id="main-wrapper" class="main-wrapper">
-            <header class="rn-header header-style-1 haeder-default black-logo-version header-right-align       header--sticky">
-                <div id="rainbow-sticky-placeholder"></div>
-                <div class="header-wrapper rn-popup-mobile-menu m--0">
-                    <div class="row align-items-center">
-                        <div class="col-lg-2 col-6">
-                            <div class="header-left">
-                                <div class="logo">
-                                    <a href="#" title="Alfred" rel="home">
-                                        <img class="dark-logo" src="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774017737/mainlogo-header-dark_hueslq.png" alt="Alfred">
-                                        <img class="light-logo" src="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774018715/main-logo-hearder-light_khepup.png" alt="Alfred">
-                                    </a>
-                                </div>
-                            </div>
+    <header class="rn-header header-style-1 haeder-default black-logo-version header-right-align header--sticky">
+        <div id="rainbow-sticky-placeholder"></div>
+        <div class="header-wrapper rn-popup-mobile-menu m--0">
+            <div class="row align-items-center">
+                <!-- Start Header Left -->
+                <div class="col-lg-2 col-6">
+                    <div class="header-left">
+                        <div class="logo">
+                            <a href="#" title="Alfred" rel="home">
+                                <img class="dark-logo" src="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774017737/mainlogo-header-dark_hueslq.png" alt="Alfred">
+                                <img class="light-logo" src="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774018715/main-logo-hearder-light_khepup.png" alt="Alfred">
+                            </a>
                         </div>
-                        <div class="col-lg-10 col-6">
-                            <div class="header-center">
-                                <nav id="onepagenav" class="mainmenu-nav navbar-example2 d-none d-xl-block">
-                                    <ul id="menu-developer" class="primary-menu nav nav-pills onepagenav">
-                                        <li id="menu-item-1336" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1336">
-                                            <a href="#iam">I Am</a>
-                                            <audio class="rbt-nav-menu-button-audio" preload="auto">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/mpeg">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/ogg">
-                                            </audio>
-                                        </li>
-                                        <li id="menu-item-1337" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1337">
-                                            <a href="#experience">My Experience</a>
-                                            <audio class="rbt-nav-menu-button-audio" preload="auto">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/mpeg">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/ogg">
-                                            </audio>
-                                        </li>
-                                        <li id="menu-item-1341" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1341">
-                                            <a href="#education">Education</a>
-                                            <audio class="rbt-nav-menu-button-audio" preload="auto">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/mpeg">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/ogg">
-                                            </audio>
-                                        </li>
-                                        <li id="menu-item-1339" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1339">
-                                            <a href="#resume">Resume</a>
-                                            <audio class="rbt-nav-menu-button-audio" preload="auto">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/mpeg">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/ogg">
-                                            </audio>
-                                        </li>
-                                        <li id="menu-item-1338" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1338">
-                                            <a href="#portfolio">Portfolio</a>
-                                            <audio class="rbt-nav-menu-button-audio" preload="auto">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/mpeg">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/ogg">
-                                            </audio>
-                                        </li>
-                                        <li id="menu-item-1342" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1342">
-                                            <a href="#blog">Blog</a>
-                                            <audio class="rbt-nav-menu-button-audio" preload="auto">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/mpeg">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/ogg">
-                                            </audio>
-                                        </li>
-                                        <li id="menu-item-1343" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1343">
-                                            <a href="#contacts">Contacts</a>
-                                            <audio class="rbt-nav-menu-button-audio" preload="auto">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/mpeg">
-                                                <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/ogg">
-                                            </audio>
-                                        </li>
-                                    </ul>
-                                </nav>
-                                <div class="header-right">
-                                    <div class="rbt-mini-cart-wrap">
-                                        <a>
-                                            <span class="mini-cart">
-                                                <i class="fa-solid fa-cart-shopping"></i>
-                                                <span class="rbt-cart-count">0</span>
-                                            </span>
-                                        </a>
-                                    </div>
-                                    <a class="rn-btn" target="_blank" href="https://api.whatsapp.com/send/?phone=2349137102840&text=Hi%20Alfred%2C%20I%20saw%20your%20profile%20and%20would%20like%20to%20discuss%20a%20potential%20project.%20Are%20you%20available%20for%20hire%3F">
-                                        <span>HIRE ME </span>
-                                    </a>
-                                    <div class="hamberger-menu d-block d-xl-none">
-                                        <i id="menuBtn" class="feather-menu humberger-menu"></i>
-                                        <i class="fa-solid fa-bars"></i>
-                                    </div>
-                                    <div class="close-menu d-block">
-                                        <span class="closeTrigger">
-                                            <i data-feather="x"></i>
-                                        </span>
-                                    </div>
-                                </div>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-6">
+                    <div class="header-center">
+                        <nav id="onepagenav" class="mainmenu-nav navbar-example2 d-none d-xl-block">
+                            <ul id="menu-home" class="primary-menu nav nav-pills onepagenav">
+                                <li class="menu-item"><a href="#iam">I Am</a></li>
+                                <li class="menu-item"><a href="#features">Features</a></li>
+                                <li class="menu-item"><a href="#portfolio">Portfolio</a></li>
+                                <li class="menu-item"><a href="#resume">Resume</a></li>
+                                <li class="menu-item"><a href="#testimonial">Testimonial</a></li>
+                                <li class="menu-item"><a href="#clients">Clients</a></li>
+                                <li class="menu-item"><a href="#pricing">Pricing</a></li>
+                                <li class="menu-item"><a href="#blog">Blog</a></li>
+                                <li class="menu-item"><a href="#contacts">Contacts</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header-right">
+                            <div class="rbt-mini-cart-wrap">
+                                                                                            <a href="#" id="miniCartBtn"><span class="mini-cart"><i class="fa-solid fa-cart-shopping"></i><span class="rbt-cart-count">0</span></span></a>
+                                                                                            <div id="miniCartPopup" style="display:none;position:absolute;top:40px;right:0;z-index:1000;background:#fff;border:1px solid #eee;padding:12px 18px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);color:#222;font-size:15px;min-width:220px;">
+                                                                                                Sorry, this section is not available now.
+                                                                                            </div>
+                            </div>
+                            <a class="rn-btn" target="_blank" href="https://api.whatsapp.com/send/?phone=2349137102840&text=Hi%20Alfred%2C%20I%20saw%20your%20profile%20and%20would%20like%20to%20discuss%20a%20potential%20project.%20Are%20you%20available%20for%20hire%3F"><span>HIRE ME</span></a>
+                            <div class="hamberger-menu d-block d-xl-none">
+                                <i id="menuBtn" class="bi bi-list"></i>
+                            </div>
+                            <div class="close-menu d-block">
+                                <span class="closeTrigger"><i data-feather="x"></i></span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </header>
+                <!-- End Header Center -->
+            </div>
+        </div>
+    </header>
             <div class="popup-mobile-menu is-mobile-onepage">
                 <div class="inner">
                     <div class="menu-top">
@@ -2287,15 +2397,8 @@ Writter</a>
                                         <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/ogg">
                                     </audio>
                                 </li>
-                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1337">
-                                    <a href="#experience">My Experience</a>
-                                    <audio class="rbt-nav-menu-button-audio" preload="auto">
-                                        <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/mpeg">
-                                        <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/ogg">
-                                    </audio>
-                                </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1341">
-                                    <a href="#education">Education</a>
+                                    <a href="#features">Features</a>
                                     <audio class="rbt-nav-menu-button-audio" preload="auto">
                                         <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/mpeg">
                                         <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/ogg">
@@ -2322,6 +2425,13 @@ Writter</a>
                                         <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/ogg">
                                     </audio>
                                 </li>
+                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3695">
+                                    <a href="#testimonial">Testimonial</a>
+                                    <audio class="rbt-nav-menu-button-audio" preload="auto">
+                                        <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/mpeg">
+                                        <source src="https://rainbowit.net/themes/inbio/wp-content/themes/inbio/template-parts/audio/link-hover-and-click.wav" type="audio/ogg">
+                                    </audio>
+                                </li>
                                 <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1343">
                                     <a href="#contacts">Contacts</a>
                                     <audio class="rbt-nav-menu-button-audio" preload="auto">
@@ -2336,17 +2446,17 @@ Writter</a>
                                 <span class="title">find with me</span>
                                 <ul class="social-share d-flex liststyle">
                                     <li class="single-item">
-                                        <a target="_blank" href="#" title="Facebook">
+                                        <a target="_blank" href="https://www.facebook.com/profile.php?id=61579486097220" title="Facebook">
                                             <i class="fa-brands fa-facebook-f"></i>
                                         </a>
                                     </li>
                                     <li class="single-item">
-                                        <a target="_blank" href="#" title="Twitter">
+                                        <a target="_blank" href="https://x.com/shmorpi_crown" title="Twitter">
                                             <i class="fa-brands fa-twitter"></i>
                                         </a>
                                     </li>
                                     <li class="single-item">
-                                        <a target="_blank" href="#" title="Linkedin">
+                                        <a target="_blank" href="https://www.linkedin.com/in/alfred-godwin-328bb5383/" title="Linkedin">
                                             <i class="fa-brands fa-linkedin-in"></i>
                                         </a>
                                     </li>
@@ -2370,10 +2480,11 @@ Writter</a>
                                                         <div class="user-info-top">
                                                             <div class="user-info-header">
                                                                 <div class="user">
-                                                                    <i class="bi bi-person"></i>
+                                                                       <span class="wave-signal"></span>
+                                                                       <i class="bi bi-person"></i>
                                                                 </div>
                                                                 <h2 class="title">
-                                                                    Hi, I’m <span>Alfred</span>
+                                                                                                                                    Hi, I’m <span class="blinking-alfred">Alfred</span>
                                                                 </h2>
                                                                 <p class="disc">I am a dedicated Web Designer and Developer currently based in Jalingo, Taraba State, where I work with the team at Trinidax Excel Limited. I specialize in creating seamless, user-centric digital experiences that combine aesthetic design with robust functionality.</p>
                                                             </div>
@@ -2385,7 +2496,7 @@ Writter</a>
                                                                 <div class="info">
                                                                     <i class="bi bi-envelope"></i>
                                                                     <span>
-                                                                        <a href="mailto:alfredgodwin973@gmail.com" class="__cf_email__" data-cfemail="0964606a61686c65496d6664686067276a6664">alfredgodwin973@gmail.com</a>
+                                                                        <a href="mailto:alfredgodwin973@gmail.com">alfredgodwin973@gmail.com</a>
                                                                     </span>
                                                                 </div>
                                                                 <div class="info">
@@ -2427,9 +2538,9 @@ Writter</a>
                                     <div class="elementor-element elementor-element-187488f elementor-widget elementor-widget-rainbow-image-holder" data-id="187488f" data-element_type="widget" data-widget_type="rainbow-image-holder.default">
                                         <div class="elementor-widget-container">
                                             <div class="rn-about-area">
-                                                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" class="image-area">
+                                                <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100" data-aos-once="true" class="image-area" style="display: block; width: 100%; max-width: 100%;">
                                                     <div class="thumbnail" style="max-height: 700px;">
-                                                        <img decoding="async" width="600" height="450" src="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774100515/594485772_122132243768982869_5537403132623725317_n_gz5ii6.jpg" class="attachment-full size-full wp-image-518" alt="banner-02" style="width: 100%; height: auto; display: block;" srcset="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774100515/594485772_122132243768982869_5537403132623725317_n_gz5ii6.jpg 800w, https://res.cloudinary.com/dmrhe3chc/image/upload/v1774100515/594485772_122132243768982869_5537403132623725317_n_gz5ii6-600x450.jpg 600w, https://res.cloudinary.com/dmrhe3chc/image/upload/v1774100515/594485772_122132243768982869_5537403132623725317_n_gz5ii6-300x225.jpg 300w, https://res.cloudinary.com/dmrhe3chc/image/upload/v1774100515/594485772_122132243768982869_5537403132623725317_n_gz5ii6-768x576.jpg 768w, https://res.cloudinary.com/dmrhe3chc/image/upload/v1774100515/594485772_122132243768982869_5537403132623725317_n_gz5ii6-335x252.jpg 335w" sizes="(max-width: 800px) 100vw, 800px"/>
+                                                        <img decoding="async" width="600" height="450" src="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774100515/594485772_122132243768982869_5537403132623725317_n_gz5ii6.jpg" class="attachment-full size-full wp-image-518" alt="banner-02" style="width: 100%; height: auto; display: block;" srcset="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774100515/594485772_122132243768982869_5537403132623725317_n_gz5ii6.jpg 800w, https://res.cloudinary.com/dmrhe3chc/image/upload/v1774100515/594485772_122132243768982869_5537403132623725317_n_gz5ii6.jpg 600w, https://res.cloudinary.com/dmrhe3chc/image/upload/v1774100515/594485772_122132243768982869_5537403132623725317_n_gz5ii6.jpg 300w, https://res.cloudinary.com/dmrhe3chc/image/upload/v1774100515/594485772_122132243768982869_5537403132623725317_n_gz5ii6.jpg 768w, https://res.cloudinary.com/dmrhe3chc/image/upload/v1774100515/594485772_122132243768982869_5537403132623725317_n_gz5ii6.jpg 335w" sizes="(max-width: 800px) 100vw, 800px"/>
                                                     </div>
                                                 </div>
                                             </div>
@@ -2454,152 +2565,111 @@ Writter</a>
                             </div>
                         </div>
                     </section>
-                    <section class="elementor-section elementor-top-section elementor-element elementor-element-e2e486f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e2e486f" data-element_type="section" id="experience">
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-e2e486f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e2e486f" data-element_type="section" data-e-type="section" id="features">
                         <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5265717" data-id="5265717" data-element_type="column">
+                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5265717" data-id="5265717" data-element_type="column" data-e-type="column">
                                 <div class="elementor-widget-wrap elementor-element-populated">
-                                    <div class="elementor-element elementor-element-8fd604f rainbow-title-1 elementor-widget elementor-widget-rainbow-title" data-id="8fd604f" data-element_type="widget" data-widget_type="rainbow-title.default">
+                                    <div class="elementor-element elementor-element-8fd604f rainbow-title-1 elementor-widget elementor-widget-rainbow-title" data-id="8fd604f" data-element_type="widget" data-e-type="widget" data-widget_type="rainbow-title.default">
                                         <div class="elementor-widget-container">
-                                            <div class="section-title text-center " data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true">
-                                                <span class="subtitle sub-title">Over 10 years of experience</span>
-                                                <h2 class="title sec-title">My Experience</h2>
+                                            <div class="section-title text-left "
+                                                data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true">
+                                                <span class="subtitle sub-title">Features</span>
+                                                <h2 class="title sec-title">What I Do
+                                                </h2>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="elementor-element elementor-element-6b2ff8e elementor-widget elementor-widget-rainbow-experience-box" data-id="6b2ff8e" data-element_type="widget" data-widget_type="rainbow-experience-box.default">
+                                    <div class="elementor-element elementor-element-579ef2d elementor-widget elementor-widget-rainbow-services-repeater" data-id="579ef2d" data-element_type="widget" data-e-type="widget" data-widget_type="rainbow-services-repeater.default">
                                         <div class="elementor-widget-container">
-                                            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="experience-style-two">
-                                                <div class="experience-left">
-                                                    <div class="experience-image">
-                                                        <img decoding="async" width="640" height="427" src="https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/experience-image-01.jpg" class="attachment-full size-full wp-image-3524" alt="" srcset="https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/experience-image-01.jpg 640w, https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/experience-image-01-600x400.jpg 600w, https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/experience-image-01-300x200.jpg 300w" sizes="(max-width: 640px) 100vw, 640px"/>
-                                                    </div>
-                                                    <div class="experience-center">
-                                                        <span class="date">2022-Present</span>
-                                                        <h4 class="experience-title">Software Develop.</h4>
-                                                        <h6 class="subtitle">Co-Founder</h6>
-                                                        <p class="disc">Deeptok</p>
-                                                    </div>
-                                                </div>
-                                                <div class="experience-right">
-                                                    <div class="experience-footer">
-                                                        <a class="rn-btn" href="#contacts">
-                                                            <span>CONTACT ME</span>
-                                                        </a>
+                                            <div class="row row--25 mt_md--10 mt_sm--10">
+                                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                                                    class="mt--50 mt_md--30 mt_sm--30 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div class="rn-service  elementor-repeater-item-f0d8163">
+                                                        <div class="inner">
+                                                            <div class="icon icon-box">
+                                                                <i class="bi bi-briefcase-fill"></i>
+                                                            </div>
+                                                            <div class="content">
+                                                                <h4 class="title"> <a href="#">Business Stratagy</a></h4>
+                                                                <p class="description"> I throw myself down among the tall grass by the stream as Ilie close to the earth.</p>
+                                                                <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="experience-style-two">
-                                                <div class="experience-left">
-                                                    <div class="experience-image">
-                                                        <img loading="lazy" decoding="async" width="640" height="480" src="https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/experience-image-03.jpg" class="attachment-full size-full wp-image-3522" alt="experience-image-03" srcset="https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/experience-image-03.jpg 640w, https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/experience-image-03-600x450.jpg 600w, https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/experience-image-03-300x225.jpg 300w" sizes="(max-width: 640px) 100vw, 640px"/>
-                                                    </div>
-                                                    <div class="experience-center">
-                                                        <span class="date">2015-2020</span>
-                                                        <h4 class="experience-title">Web Design.</h4>
-                                                        <h6 class="subtitle">Founder, BCHON IT Company</h6>
-                                                        <p class="disc">Reinvetning the way you create websites</p>
-                                                    </div>
-                                                </div>
-                                                <div class="experience-right">
-                                                    <div class="experience-footer">
-                                                        <a class="rn-btn" href="#contacts">
-                                                            <span>CONTACT ME</span>
-                                                        </a>
+                                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                                                    class="mt--50 mt_md--30 mt_sm--30 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div class="rn-service  elementor-repeater-item-edf2f94">
+                                                        <div class="inner">
+                                                            <div class="icon icon-box">
+                                                                <i class="bi bi-code-square"></i>
+                                                            </div>
+                                                            <div class="content">
+                                                                <h4 class="title"> <a href="#">App Development</a></h4>
+                                                                <p class="description"> We’ll handle everything from to app development process until it is time to make your project live. </p>
+                                                                <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="elementor-section elementor-top-section elementor-element elementor-element-1a397cb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1a397cb" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-55bef81" data-id="55bef81" data-element_type="column">
-                                <div class="elementor-widget-wrap elementor-element-populated">
-                                    <div class="elementor-element elementor-element-d74e8a8 elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="d74e8a8" data-element_type="widget" data-widget_type="divider.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="elementor-divider">
-                                                <span class="elementor-divider-separator"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="elementor-section elementor-top-section elementor-element elementor-element-85a85f9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="85a85f9" data-element_type="section" id="education">
-                        <div class="elementor-container elementor-column-gap-default">
-                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9597907" data-id="9597907" data-element_type="column">
-                                <div class="elementor-widget-wrap elementor-element-populated">
-                                    <div class="elementor-element elementor-element-f936466 rainbow-title-1 elementor-widget elementor-widget-rainbow-title" data-id="f936466" data-element_type="widget" data-widget_type="rainbow-title.default">
-                                        <div class="elementor-widget-container">
-                                            <div class="section-title text-center " data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true">
-                                                <span class="subtitle sub-title">My Learning Path</span>
-                                                <h2 class="title sec-title">Education & Experience</h2>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="elementor-element elementor-element-1d21dc5 elementor-widget elementor-widget-rainbow-experience-box" data-id="1d21dc5" data-element_type="widget" data-widget_type="rainbow-experience-box.default">
-                                        <div class="elementor-widget-container">
-                                            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="experience-style-two">
-                                                <div class="experience-left">
-                                                    <div class="experience-image">
-                                                        <img loading="lazy" decoding="async" width="600" height="400" src="https://res.cloudinary.com/dmrhe3chc/image/upload/v1771086267/trinidax.svg_ejrkid.png" class="attachment-full size-full wp-image-3519" alt="university-image" srcset="https://res.cloudinary.com/dmrhe3chc/image/upload/v1771086267/trinidax.svg_ejrkid.png 600w, https://res.cloudinary.com/dmrhe3chc/image/upload/v1771086267/trinidax.svg_ejrkid-300x200.png 300w" sizes="(max-width: 600px) 100vw, 600px"/>
-                                                    </div>
-                                                    <div class="experience-center">
-                                                        <span class="date">2024 - Present</span>
-                                                        <h4 class="experience-title">IT Staff / Developer</h4>
-                                                        <h6 class="subtitle">Trinidax Excel Limited</h6>
-                                                        <p class="disc">Jalingo, Taraba State, Nigeria</p>
+                                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                                                    class="mt--50 mt_md--30 mt_sm--30 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div class="rn-service  elementor-repeater-item-06e011a">
+                                                        <div class="inner">
+                                                            <div class="icon icon-box">
+                                                                <i class="bi bi-graph-up"></i>
+                                                            </div>
+                                                            <div class="content">
+                                                                <h4 class="title"> <a href="#">Business Stratagy</a></h4>
+                                                                <p class="description"> We’ll help you optimize your business processes to maximize profitability and eliminate unnecessary costs.</p>
+                                                                <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="experience-right">
-                                                    <div class="experience-footer">
-                                                        <a class="rn-btn" href="#">
-                                                            <span>PROFILE</span>
-                                                        </a>
+                                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                                                    class="mt--50 mt_md--30 mt_sm--30 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div class="rn-service  elementor-repeater-item-7e7065b">
+                                                        <div class="inner">
+                                                            <div class="icon icon-box">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitch"><path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"></path></svg>
+                                                            </div>
+                                                            <div class="content">
+                                                                <h4 class="title"> <a href="#">Mobile App</a></h4>
+                                                                <p class="description"> Using our expertise in mobile application development to create beautiful pixel-perfect designs.</p>
+                                                                <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="experience-style-two">
-                                                <div class="experience-left">
-                                                    <div class="experience-image">
-                                                        <img loading="lazy" decoding="async" width="1024" height="768" src="https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/colleges-image-02.jpg" class="attachment-full size-full wp-image-3521" alt="Trinidax school" srcset="https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/colleges-image-02.jpg 1024w, https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/colleges-image-02-600x450.jpg 600w, https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/colleges-image-02-300x225.jpg 300w, https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/colleges-image-02-768x576.jpg 768w, https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/colleges-image-02-800x600.jpg 800w" sizes="(max-width: 1024px) 100vw, 1024px"/>
-                                                    </div>
-                                                    <div class="experience-center">
-                                                        <span class="date">2021 - 2022</span>
-                                                        <h4 class="experience-title">Certificate in Computer Studies</h4>
-                                                        <h6 class="subtitle">Trinidax School of Computer Studies</h6>
-                                                        <p class="disc">Jalingo, Taraba State, Nigeria </p>
-                                                    </div>
-                                                </div>
-                                                <div class="experience-right">
-                                                    <div class="experience-footer">
-                                                        <a class="rn-btn" href="#">
-                                                            <span>CERTIFICATE</span>
-                                                        </a>
+                                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                                                    class="mt--50 mt_md--30 mt_sm--30 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div class="rn-service  elementor-repeater-item-a21d37f">
+                                                        <div class="inner">
+                                                            <div class="icon icon-box">
+                                                                <i class="bi bi-wifi"></i>
+                                                            </div>
+                                                            <div class="content">
+                                                                <h4 class="title"> <a href="#">SEO Optimisation</a></h4>
+                                                                <p class="description"> Your website ranking matters. Our SEO services will help you get to the top of the ranks and stay there!</p>
+                                                                <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="experience-style-two">
-                                                <div class="experience-left">
-                                                    <div class="experience-image">
-                                                        <img loading="lazy" decoding="async" width="1280" height="853" src="https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/colleges-image-03.jpg" class="attachment-full size-full wp-image-3520" alt="GDSS RIMI" srcset="https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/colleges-image-03.jpg 1280w, https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/colleges-image-03-600x400.jpg 600w, https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/colleges-image-03-300x200.jpg 300w, https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/colleges-image-03-1024x682.jpg 1024w, https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/colleges-image-03-768x512.jpg 768w" sizes="(max-width: 1280px) 100vw, 1280px"/>
-                                                    </div>
-                                                    <div class="experience-center">
-                                                        <span class="date">2014 - 2020</span>
-                                                        <h4 class="experience-title">Secondary School Education</h4>
-                                                        <h6 class="subtitle">GDSS Rimi Takum</h6>
-                                                        <p class="disc">Takum, Taraba State, Nigeria</p>
-                                                    </div>
-                                                </div>
-                                                <div class="experience-right">
-                                                    <div class="experience-footer">
-                                                        <a class="rn-btn" href="#">
-                                                            <span>ALUMNI</span>
-                                                        </a>
+                                                <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true"
+                                                    class="mt--50 mt_md--30 mt_sm--30 col-lg-4 col-md-6 col-sm-6 col-12">
+                                                    <div class="rn-service  elementor-repeater-item-0b5ca39">
+                                                        <div class="inner">
+                                                            <div class="icon icon-box">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-slack"><path d="M14.5 10c-.83 0-1.5-.67-1.5-1.5v-5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5z"></path><path d="M20.5 10H19V8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path><path d="M9.5 14c.83 0 1.5.67 1.5 1.5v5c0 .83-.67 1.5-1.5 1.5S8 21.33 8 20.5v-5c0-.83.67-1.5 1.5-1.5z"></path><path d="M3.5 14H5v1.5c0 .83-.67 1.5-1.5 1.5S2 16.33 2 15.5 2.67 14 3.5 14z"></path><path d="M14 14.5c0-.83.67-1.5 1.5-1.5h5c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5h-5c-.83 0-1.5-.67-1.5-1.5z"></path><path d="M15.5 19H14v1.5c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5-.67-1.5-1.5-1.5z"></path><path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z"></path><path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z"></path></svg>
+                                                            </div>
+                                                            <div class="content">
+                                                                <h4 class="title"> <a href="#">UX Consulting</a></h4>
+                                                                <p class="description"> A UX consultant is responsible for many of the same tasks as a UX designer, but they typically.</p>
+                                                                <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -3149,6 +3219,216 @@ Writter</a>
                             </div>
                         </div>
                     </section>
+                    <!-- PRICING SECTION START -->
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-45acd73 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="45acd73" data-element_type="section" data-e-type="section" id="pricing">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-fc88a1f position-sticky sticky-top rbt-sticky-top-adjust" data-id="fc88a1f" data-element_type="column" data-e-type="column">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-2108e80 rainbow-title-3 elementor-widget elementor-widget-rainbow-title" data-id="2108e80" data-element_type="widget" data-e-type="widget" data-widget_type="rainbow-title.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="position-sticky sticky-top rbt-sticky-top-adjust">
+                                                <div class="section-title text-left ">
+                                                    <span class="subtitle sub-title">Pricing</span>
+                                                    <h2 class="title sec-title">My Pricing</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-84f8468" data-id="84f8468" data-element_type="column" data-e-type="column">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-9b03533 elementor-widget elementor-widget-rb-library-tab" data-id="9b03533" data-element_type="widget" data-e-type="widget" data-widget_type="rb-library-tab.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="rn-pricing-area">
+                                                <div class="navigation-wrapper">
+                                                    <ul class="nav " id="myTab" role="tablist">
+                                                        <li class="nav-item no-recommended" data-recommended-label="Recommended">
+                                                            <a class="nav-style active" id="rbbasicPlan-29b03533" data-toggle="tab" href="#tab_link_29b03533" role="tab" aria-selected="false">Static</a>
+                                                        </li>
+                                                        <li class="nav-item recommended" data-recommended-label="Recommended">
+                                                            <a class="nav-style no-active" id="rbbasicPlan-39b03533" data-toggle="tab" href="#tab_link_39b03533" role="tab" aria-selected="false">Standard</a>
+                                                        </li>
+                                                        <li class="nav-item no-recommended" data-recommended-label="Recommended">
+                                                            <a class="nav-style no-active" id="rbbasicPlan-49b03533" data-toggle="tab" href="#tab_link_49b03533" role="tab" aria-selected="false">Premium</a>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="tab-content" id="myTabContent">
+                                                        <div class="tab-pane fade  active show" id="tab_link_29b03533">
+                                                            <div data-elementor-type="section" data-elementor-id="108" class="elementor elementor-108">
+                                                                <section class="elementor-section elementor-top-section elementor-element elementor-element-85181f7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="85181f7" data-element_type="section" data-e-type="section">
+                                                                    <div class="elementor-container elementor-column-gap-default">
+                                                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-39cfd00" data-id="39cfd00" data-element_type="column" data-e-type="column">
+                                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                                <div class="elementor-element elementor-element-12dc4f8 elementor-widget elementor-widget-rainbow-pricing-table" data-id="12dc4f8" data-element_type="widget" data-e-type="widget" data-widget_type="rainbow-pricing-table.default">
+                                                                                    <div class="elementor-widget-container">
+                                                                                        <div class="rn-pricing">
+                                                                                            <div class="pricing-header">
+                                                                                                <div class="header-left">
+                                                                                                    <h2 class="title">Make Your Single Page</h2>
+                                                                                                    <span>Elementor / WPBakery</span>
+                                                                                                </div>
+                                                                                                <div class="header-right">
+                                                                                                    <span>₦120,000</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="pricing-body">
+                                                                                                <p class="description">Perfect for landing pages, portfolios, or single-page business sites. Fast delivery, mobile responsive, and tailored to your brand.</p>
+                                                                                                <div class="check-wrapper">
+                                                                                                    <div class="left-area">
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>1 Page with Elementor</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Design Customization</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Responsive Design</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Content Upload</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Design Customization</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>2 Plugins/Extensions</p></div>
+                                                                                                    </div>
+                                                                                                    <div class="right-area">
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Multipage Elementor</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Design Figma</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>MAintaine Design</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Content Upload</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Design With XD</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>8 Plugins/Extensions</p></div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="pricing-footer">
+                                                                                                <a class="rn-btn d-block" href="#">ORDER NOW<i class="feather-arrow-right"></i></a>
+                                                                                                <div class="time-line">
+                                                                                                    <div class="single-cmt d-flex"><i class="feather-clock"></i><span> 2 Days Delivery</span></div>
+                                                                                                    <div class="single-cmt d-flex"><i class="feather-activity"></i><span> Unlimited Revission</span></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade  no-active" id="tab_link_39b03533">
+                                                            <div data-elementor-type="section" data-elementor-id="3200" class="elementor elementor-3200">
+                                                                <section class="elementor-section elementor-top-section elementor-element elementor-element-22d5076 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="22d5076" data-element_type="section" data-e-type="section">
+                                                                    <div class="elementor-container elementor-column-gap-default">
+                                                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-902024c" data-id="902024c" data-element_type="column" data-e-type="column">
+                                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                                <div class="elementor-element elementor-element-1b6aeb8 elementor-widget elementor-widget-rainbow-pricing-table" data-id="1b6aeb8" data-element_type="widget" data-e-type="widget" data-widget_type="rainbow-pricing-table.default">
+                                                                                    <div class="elementor-widget-container">
+                                                                                        <div class="rn-pricing">
+                                                                                            <div class="pricing-header">
+                                                                                                <div class="header-left">
+                                                                                                    <h2 class="title">Design Make this Page</h2>
+                                                                                                    <span>Elementor / WPBakery</span>
+                                                                                                </div>
+                                                                                                <div class="header-right">
+                                                                                                    <span>₦200,000</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="pricing-body">
+                                                                                                <p class="description">A complete multi-page website for your business or project. Includes custom design, content upload, and essential plugins for growth.</p>
+                                                                                                <div class="check-wrapper">
+                                                                                                    <div class="left-area">
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>5 Page with Elementor</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Design Customization</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Responsive Design</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Content Upload</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Design Customization</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>5 Plugins/Extensions</p></div>
+                                                                                                    </div>
+                                                                                                    <div class="right-area">
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Multipage Elementor</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Design Figma</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>MAintaine Design</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Content Upload</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Design With XD</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>50 Plugins/Extensions</p></div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="pricing-footer">
+                                                                                                <a class="rn-btn d-block" href="#">ORDER NOW<i class="feather-arrow-right"></i></a>
+                                                                                                <div class="time-line">
+                                                                                                    <div class="single-cmt d-flex"><i class="feather-clock"></i><span> 2 Days Delivery</span></div>
+                                                                                                    <div class="single-cmt d-flex"><i class="feather-activity"></i><span> Unlimited Revission</span></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tab-pane fade  no-active" id="tab_link_49b03533">
+                                                            <div data-elementor-type="section" data-elementor-id="2715" class="elementor elementor-2715">
+                                                                <section class="elementor-section elementor-top-section elementor-element elementor-element-f5ea713 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="f5ea713" data-element_type="section" data-e-type="section">
+                                                                    <div class="elementor-container elementor-column-gap-default">
+                                                                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-b7bbe65" data-id="b7bbe65" data-element_type="column" data-e-type="column">
+                                                                            <div class="elementor-widget-wrap elementor-element-populated">
+                                                                                <div class="elementor-element elementor-element-23f3b7a elementor-widget elementor-widget-rainbow-pricing-table" data-id="23f3b7a" data-element_type="widget" data-e-type="widget" data-widget_type="rainbow-pricing-table.default">
+                                                                                    <div class="elementor-widget-container">
+                                                                                        <div class="rn-pricing">
+                                                                                            <div class="pricing-header">
+                                                                                                <div class="header-left">
+                                                                                                    <h2 class="title">Customize Your Single Page</h2>
+                                                                                                    <span>Elementor / WPBakery</span>
+                                                                                                </div>
+                                                                                                <div class="header-right">
+                                                                                                    <span>₦350,000</span>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="pricing-body">
+                                                                                                <p class="description">Full website customization and advanced features. Ideal for established brands needing unique layouts, integrations, and ongoing support.</p>
+                                                                                                <div class="check-wrapper">
+                                                                                                    <div class="left-area">
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>10 Page with Elementor</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Design Customization</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Responsive Design</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Content Upload</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Design Customization</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>20 Plugins/Extensions</p></div>
+                                                                                                    </div>
+                                                                                                    <div class="right-area">
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Multipage Elementor</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Design Figma</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>MAintaine Design</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Content Upload</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>Design With XD</p></div>
+                                                                                                        <div class="check d-flex"><i class="feather-check"></i><p>100 Plugins/Extensions</p></div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="pricing-footer">
+                                                                                                <a class="rn-btn d-block" href="#">ORDER NOW<i class="feather-arrow-right"></i></a>
+                                                                                                <div class="time-line">
+                                                                                                    <div class="single-cmt d-flex"><i class="feather-clock"></i><span> 2 Days Delivery</span></div>
+                                                                                                    <div class="single-cmt d-flex"><i class="feather-activity"></i><span> Unlimited Revission</span></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </section>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- PRICING SECTION END -->
                     <section class="elementor-section elementor-top-section elementor-element elementor-element-ea3e41a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ea3e41a" data-element_type="section" id="blog">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d6d9ad6" data-id="d6d9ad6" data-element_type="column">
@@ -3174,7 +3454,7 @@ Writter</a>
                                 <div class="thumbnail">
                                     <a class="thumb-only-popup" href="#" data-toggle="modal" data-target="#blogPost1">
                                         <img loading="lazy" decoding="async" width="340" height="250" 
-                                             src="https://rainbowit.net/themes/inbio/wp-content/uploads/2021/09/marketing-young-cute-business-lady-striped-shirt-office-showing-raising-results-1-340x250.jpg" 
+                                             src="/media/2026/01/web-dev.jpg" 
                                              class="attachment-rainbow-thumbnail-sm size-rainbow-thumbnail-sm wp-post-image" 
                                              alt="Young developer working on laptop in Jalingo office"/>
                                     </a>
@@ -3215,7 +3495,7 @@ Writter</a>
                                 <div class="modal-body">
                                     <div class="post-thumbnail img-fluid modal-feat-im mb--30">
                                         <img loading="lazy" decoding="async" width="800" height="450" 
-                                             src="https://rainbowit.net/themes/inbio/wp-content/uploads/2021/09/marketing-young-cute-business-lady-striped-shirt-office-showing-raising-results-1-800x450.jpg" 
+                                             src="/media/2026/01/web-dev.jpg" 
                                              class="img-fluid modal-feat-im in-radius wp-post-image" 
                                              alt="Alfred working at Trinidax Excel Limited Jalingo"/>
                                     </div>
@@ -3229,7 +3509,7 @@ Writter</a>
                                         
                                         <figure class="wp-block-image size-rb-thumbnail-single">
                                             <img decoding="async" width="1220" height="600" 
-                                                 src="https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/bl-big-01-1220x600.jpg" 
+                                                 src="/media/2026/01/gdss-gov-sch00l.jpg" 
                                                  alt="Trinidax School of Computer Studies" 
                                                  class="wp-image-3451"/>
                                             <figcaption>Trinidax School of Computer Studies, Jalingo</figcaption>
@@ -3256,7 +3536,7 @@ Writter</a>
                                 <div class="thumbnail">
                                     <a class="thumb-only-popup" href="#" data-toggle="modal" data-target="#blogPost2">
                                         <img loading="lazy" decoding="async" width="340" height="250" 
-                                             src="https://rainbowit.net/themes/inbio/wp-content/uploads/2021/09/pretty-curly-young-woman-writing-notes-startup-project-340x250.jpg" 
+                                             src="/media/2026/01/man-in-class.jpg" 
                                              class="attachment-rainbow-thumbnail-sm size-rainbow-thumbnail-sm wp-post-image" 
                                              alt="Developer writing JavaScript code"/>
                                     </a>
@@ -3297,7 +3577,7 @@ Writter</a>
                                 <div class="modal-body">
                                     <div class="post-thumbnail img-fluid modal-feat-im mb--30">
                                         <img loading="lazy" decoding="async" width="800" height="450" 
-                                             src="https://rainbowit.net/themes/inbio/wp-content/uploads/2021/09/pretty-curly-young-woman-writing-notes-startup-project-800x450.jpg" 
+                                             src="/media/2026/01/tartup-team-cheering-after-seeing-company-stocks-raising-doing-high-five.jpg" 
                                              class="img-fluid modal-feat-im in-radius wp-post-image" 
                                              alt="JavaScript code on screen"/>
                                     </div>
@@ -3335,7 +3615,7 @@ Writter</a>
                                 <div class="thumbnail">
                                     <a class="thumb-only-popup" href="#" data-toggle="modal" data-target="#blogPost3">
                                         <img loading="lazy" decoding="async" width="340" height="250" 
-                                             src="https://rainbowit.net/themes/inbio/wp-content/uploads/2021/09/road-sign-direction-perforated-paper-arrow-340x250.jpg" 
+                                             src="/media/2026/01/teaching-blog.jpg" 
                                              class="attachment-rainbow-thumbnail-sm size-rainbow-thumbnail-sm wp-post-image" 
                                              alt="Tech opportunities in Taraba State Nigeria"/>
                                     </a>
@@ -3376,7 +3656,7 @@ Writter</a>
                                 <div class="modal-body">
                                     <div class="post-thumbnail img-fluid modal-feat-im mb--30">
                                         <img loading="lazy" decoding="async" width="800" height="450" 
-                                             src="https://rainbowit.net/themes/inbio/wp-content/uploads/2021/09/road-sign-direction-perforated-paper-arrow-800x450.jpg" 
+                                             src="/media/2026/01/teaching-blog.jpg" 
                                              class="img-fluid modal-feat-im in-radius wp-post-image" 
                                              alt="Jalingo city view Taraba State"/>
                                     </div>
@@ -3390,7 +3670,7 @@ Writter</a>
                                         
                                         <figure class="wp-block-image size-rb-thumbnail-single">
                                             <img decoding="async" width="1220" height="600" 
-                                                 src="https://rainbowit.net/themes/inbio/wp-content/uploads/2022/08/bl-big-01-1220x600.jpg" 
+                                                 src="/media/2026/01/startup-team-cheering-after-seeing-company-stocks-raising-doing-high-five.jpg" 
                                                  alt="Trinidax Excel Limited office Jalingo" 
                                                  class="wp-image-3451"/>
                                             <figcaption>Trinidax Excel Limited, Jalingo</figcaption>
@@ -3433,6 +3713,255 @@ Writter</a>
                             </div>
                         </div>
                     </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-480c977 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="480c977" data-element_type="section" data-e-type="section" id="testimonial">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9cdb4bf" data-id="9cdb4bf" data-element_type="column" data-e-type="column">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-0b5429f rainbow-title-1 elementor-widget elementor-widget-rainbow-title" data-id="0b5429f" data-element_type="widget" data-e-type="widget" data-widget_type="rainbow-title.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="section-title text-center "
+                 data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true">
+                                                <span class="subtitle sub-title">What Clients Say</span>
+                                                <h2 class="title sec-title">Testimonial
+</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-49a90a2 elementor-widget elementor-widget-rainbow-testimonial" data-id="49a90a2" data-element_type="widget" data-e-type="widget" data-widget_type="rainbow-testimonial.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="testimonial-activation-wrapper">    
+	 <div class="testimonial-activation testimonial-pb mb--30">   
+
+	 		    <div class="testimonial mt--50 mt_md--40 mt_sm--40">
+		        <div class="inner">
+		            <div class="card-info">
+		            								<div class="card-thumbnail">								
+								<img loading="lazy" decoding="async" width="335" height="252" src="/media/2026/test-03/founder.jpg" class="attachment-full size-full" alt="man profile image 3" />							</div>
+							
+
+		                <div class="card-content">
+                            <span class="subtitle mt--10">Freelance Client</span>
+                            <h3 class="title">TY NATHANIEL</h3>
+                            <span class="designation">Entrepreneur</span>
+		                </div>
+
+		            </div>
+		            <div class="card-description">
+		                <div class="title-area">
+		                    <div class="title-info">
+                                <h3 class="title">Freelancing Website Development</h3>
+                                <span class="date">Project delivered: 2025</span>
+		                    </div>
+
+		                    								<div class="rating">
+									<ul>
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																										</ul>
+								 </div>
+									                    
+		                </div>
+		                <div class="seperator"></div>
+                        <p class="description">
+                            "Alfred built a robust freelancing website for my business. The process was smooth, and the result was exactly what I needed to launch my platform. Highly recommended!"
+                        </p>
+		            </div>
+		        </div>
+		    </div> 
+	    		    <div class="testimonial mt--50 mt_md--40 mt_sm--40">
+		        <div class="inner">
+		            <div class="card-info">
+		            								<div class="card-thumbnail">								
+								<img loading="lazy" decoding="async" width="335" height="252" src="/media/2026/test-03/portrait-middle-aged-hispanic-cheerful-female-with-curly-hair.jpg" class="attachment-full size-full" alt="final home" />							</div>
+							
+
+		                <div class="card-content">
+                            <span class="subtitle mt--10">Restaurant Owner</span>
+                            <h3 class="title">ESTHER DONALD</h3>
+                            <span class="designation">Business Owner</span>
+		                </div>
+
+		            </div>
+		            <div class="card-description">
+		                <div class="title-area">
+		                    <div class="title-info">
+                                <h3 class="title">Restaurant Website Development</h3>
+                                <span class="date">Project delivered: 2025</span>
+		                    </div>
+
+		                    								<div class="rating">
+									<ul>
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																												<li class="nonrating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+																	</ul>
+								 </div>
+									                    
+		                </div>
+		                <div class="seperator"></div>
+                        <p class="description">
+                            "I needed a modern website for my restaurant and Alfred delivered beyond my expectations. The site is beautiful, easy to use, and has helped attract more customers."
+                        </p>
+		            </div>
+		        </div>
+		    </div> 
+	    		    <div class="testimonial mt--50 mt_md--40 mt_sm--40">
+		        <div class="inner">
+		            <div class="card-info">
+		            								<div class="card-thumbnail">								
+								<img loading="lazy" decoding="async" width="335" height="252" src="/media/2026/test-03/cheerful-business-executive-leaning-his-boss-table.jpg" class="attachment-full size-full" alt="final-home--2nd" />							</div>
+							
+
+		                <div class="card-content">
+                            <span class="subtitle mt--10">School Director</span>
+                            <h3 class="title">MUSA ABDUL</h3>
+                            <span class="designation">Administrator</span>
+		                </div>
+
+		            </div>
+		            <div class="card-description">
+		                <div class="title-area">
+		                    <div class="title-info">
+                                <h3 class="title">School Website Development</h3>
+                                <span class="date">Project delivered: 2026</span>
+		                    </div>
+
+		                    								<div class="rating">
+									<ul>
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																			<li class="has-rating list-inline-item">
+											<i class="star-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
+												<path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+												</svg>
+											</i>
+										</li>
+
+																										</ul>
+								 </div>
+									                    
+		                </div>
+		                <div class="seperator"></div>
+                        <p class="description">
+                            "Alfred created a professional website for our school. Communication was clear, and the final product is user-friendly for both staff and parents. We are very satisfied!"
+                        </p>
+		            </div>
+		        </div>
+		    </div> 
+	    	</div>
+</div>
+
+				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+                    </section>
                     <section class="elementor-section elementor-top-section elementor-element elementor-element-b6d0009 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b6d0009" data-element_type="section" id="contacts">
                         <div class="elementor-container elementor-column-gap-no">
                             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ff13221" data-id="ff13221" data-element_type="column">
@@ -3462,12 +3991,12 @@ Writter</a>
                                                                 <div class="description">
                                                                     <p>I'm available for freelance work and web development projects. Connect with me via below links for collaborations and opportunities.</p>
                                                                     <span class="phone">
-                                                                        Phone: <a href="tel:+01234567890">+234 913 710 2840</a>
+                                                                        Phone: <a href="tel:+234 913 710 2840">+234 913 710 2840</a>
                                                                     </span>
                                                                     <span class="mail">
                                                                         Email: 
-                                                                        <a href="/cdn-cgi/l/email-protection#5f3e3b3236311f3a273e322f333a713c3032">
-                                                                            <span class="__cf_email__" data-cfemail="3756535a5e5977524f565a475b521954585a">alfredgodwin937@gmail.com</span>
+                                                                        <a href="mailto:alfredgodwin973@gmail.com">
+                                                                            <span >alfredgodwin937@gmail.com</span>
                                                                         </a>
                                                                     </span>
                                                                 </div>
@@ -3612,8 +4141,8 @@ Writter</a>
                 <div class="rbt-video-inner">
                     <div class="rbt-video-progress-container">
                         <!--Hello! My name is Alfred Godwin. I design and develop modern websites that help businesses grow. You’re looking at my official portfolio, where I showcase my work in tech and e-commerce. Take a look around, and when you're ready to start your project, click the hire button to get me on your team. I look forward to working with you!-->
-                        <video class="rbt-video-element" id="rbt-video-element" poster="https://res.cloudinary.com/dmrhe3chc/image/upload/v1773936221/left_image_tj2vtu.png">
-                            <source src="https://res.cloudinary.com/dmrhe3chc/video/upload/v1774106939/alfred-vid_sor1kw.mp4">
+                        <video class="rbt-video-element" id="rbt-video-element" poster="/media/2026/test-03/talk.PNG">
+                            <source src="/media/2026/test-03/Alfred_team_talk_ads.mp4">
                         </video>
                         <div class="rbt-video-controls">
                             <div class="play-button" title="Play/Pause (Spacebar)">
@@ -3623,7 +4152,7 @@ Writter</a>
                                 <i class="uil-volume"></i>
                             </div>
                             <div class="expand-icon" title="Expand">
-                                <!--<i class="feather-maximize-2"></i>--><img src="https://cdnl.iconscout.com/lottie/premium/thumb/diagonal-resize-animation-gif-download-5036937.gif?h=480" width="160" height="160">
+                                <!--<i class="feather-maximize-2"></i>--><i class="bi bi-arrows-angle-expand"></i>
                             </div>
                         </div>
                         <div class="rbt-iv-top-wrapper">
@@ -3694,8 +4223,8 @@ Writter</a>
         <div id="inbio-notification-bar" class="inbio-notification-bar center bottom notificationbar-hidden gradient draggable">
             <img src="https://res.cloudinary.com/dmrhe3chc/image/upload/v1774103100/Alfred-thecoder-2_njsayv.png" alt="Profile Picture" class="profile-pic" style="max-width: 60px; height: 60px; width: 100%; object-fit: cover; border-radius: 50%; display: block;">
             <div class="inbio-notification-content">
-                <h5 class="name">Hi, I'm Alfred available for hire</h5>
-                <div class="inbio-availability">Availability: Up to 2 hours per session</div>
+                            <h5 class="name">Hi, I'm Alfred Web Developer</h5>
+                            <div class="inbio-availability">Available for new projects</div>
             </div>
             <a href="https://api.whatsapp.com/send/?phone=2349137102840&text=Hi%20Alfred%2C%20I%20saw%20your%20profile%20and%20would%20like%20to%20discuss%20a%20potential%20project.%20Are%20you%20available%20for%20hire%3F" target="_blank" rel="noopener noreferrer" class="rn-btn">Hire me</a>
             <button class="inbio-close-button">&times;</button>
@@ -3747,7 +4276,35 @@ Writter</a>
         <script type="text/javascript" id="elementor-frontend-js-before" src="data:text/javascript;base64,dmFyIGVsZW1lbnRvckZyb250ZW5kQ29uZmlnPXsiZW52aXJvbm1lbnRNb2RlIjp7ImVkaXQiOiExLCJ3cFByZXZpZXciOiExLCJpc1NjcmlwdERlYnVnIjohMX0sImkxOG4iOnsic2hhcmVPbkZhY2Vib29rIjoiU2hhcmUgb24gRmFjZWJvb2siLCJzaGFyZU9uVHdpdHRlciI6IlNoYXJlIG9uIFR3aXR0ZXIiLCJwaW5JdCI6IlBpbiBpdCIsImRvd25sb2FkIjoiRG93bmxvYWQiLCJkb3dubG9hZEltYWdlIjoiRG93bmxvYWQgaW1hZ2UiLCJmdWxsc2NyZWVuIjoiRnVsbHNjcmVlbiIsInpvb20iOiJab29tIiwic2hhcmUiOiJTaGFyZSIsInBsYXlWaWRlbyI6IlBsYXkgVmlkZW8iLCJwcmV2aW91cyI6IlByZXZpb3VzIiwibmV4dCI6Ik5leHQiLCJjbG9zZSI6IkNsb3NlIiwiYTExeUNhcm91c2VsUHJldlNsaWRlTWVzc2FnZSI6IlByZXZpb3VzIHNsaWRlIiwiYTExeUNhcm91c2VsTmV4dFNsaWRlTWVzc2FnZSI6Ik5leHQgc2xpZGUiLCJhMTF5Q2Fyb3VzZWxGaXJzdFNsaWRlTWVzc2FnZSI6IlRoaXMgaXMgdGhlIGZpcnN0IHNsaWRlIiwiYTExeUNhcm91c2VsTGFzdFNsaWRlTWVzc2FnZSI6IlRoaXMgaXMgdGhlIGxhc3Qgc2xpZGUiLCJhMTF5Q2Fyb3VzZWxQYWdpbmF0aW9uQnVsbGV0TWVzc2FnZSI6IkdvIHRvIHNsaWRlIn0sImlzX3J0bCI6ITEsImJyZWFrcG9pbnRzIjp7InhzIjowLCJzbSI6NDgwLCJtZCI6NzY4LCJsZyI6MTAyNSwieGwiOjE0NDAsInh4bCI6MTYwMH0sInJlc3BvbnNpdmUiOnsiYnJlYWtwb2ludHMiOnsibW9iaWxlIjp7ImxhYmVsIjoiTW9iaWxlIFBvcnRyYWl0IiwidmFsdWUiOjc2NywiZGVmYXVsdF92YWx1ZSI6NzY3LCJkaXJlY3Rpb24iOiJtYXgiLCJpc19lbmFibGVkIjohMH0sIm1vYmlsZV9leHRyYSI6eyJsYWJlbCI6Ik1vYmlsZSBMYW5kc2NhcGUiLCJ2YWx1ZSI6ODgwLCJkZWZhdWx0X3ZhbHVlIjo4ODAsImRpcmVjdGlvbiI6Im1heCIsImlzX2VuYWJsZWQiOiExfSwidGFibGV0Ijp7ImxhYmVsIjoiVGFibGV0IFBvcnRyYWl0IiwidmFsdWUiOjEwMjQsImRlZmF1bHRfdmFsdWUiOjEwMjQsImRpcmVjdGlvbiI6Im1heCIsImlzX2VuYWJsZWQiOiEwfSwidGFibGV0X2V4dHJhIjp7ImxhYmVsIjoiVGFibGV0IExhbmRzY2FwZSIsInZhbHVlIjoxMjAwLCJkZWZhdWx0X3ZhbHVlIjoxMjAwLCJkaXJlY3Rpb24iOiJtYXgiLCJpc19lbmFibGVkIjohMX0sImxhcHRvcCI6eyJsYWJlbCI6IkxhcHRvcCIsInZhbHVlIjoxMzY2LCJkZWZhdWx0X3ZhbHVlIjoxMzY2LCJkaXJlY3Rpb24iOiJtYXgiLCJpc19lbmFibGVkIjohMX0sIndpZGVzY3JlZW4iOnsibGFiZWwiOiJXaWRlc2NyZWVuIiwidmFsdWUiOjI0MDAsImRlZmF1bHRfdmFsdWUiOjI0MDAsImRpcmVjdGlvbiI6Im1pbiIsImlzX2VuYWJsZWQiOiExfX0sImhhc0N1c3RvbUJyZWFrcG9pbnRzIjohMX0sInZlcnNpb24iOiIzLjMwLjIiLCJpc19zdGF0aWMiOiExLCJleHBlcmltZW50YWxGZWF0dXJlcyI6eyJhZGRpdGlvbmFsX2N1c3RvbV9icmVha3BvaW50cyI6ITAsImhvbWVfc2NyZWVuIjohMCwiZ2xvYmFsX2NsYXNzZXNfc2hvdWxkX2VuZm9yY2VfY2FwYWJpbGl0aWVzIjohMCwiY2xvdWQtbGlicmFyeSI6ITAsImVfb3B0X2luX3Y0X3BhZ2UiOiEwfSwidXJscyI6eyJhc3NldHMiOiJodHRwczpcL1wvcmFpbmJvd2l0Lm5ldFwvdGhlbWVzXC9pbmJpb1wvd3AtY29udGVudFwvcGx1Z2luc1wvZWxlbWVudG9yXC9hc3NldHNcLyIsImFqYXh1cmwiOiJodHRwczpcL1wvcmFpbmJvd2l0Lm5ldFwvdGhlbWVzXC9pbmJpb1wvd3AtYWRtaW5cL2FkbWluLWFqYXgucGhwIiwidXBsb2FkVXJsIjoiaHR0cHM6XC9cL3JhaW5ib3dpdC5uZXRcL3RoZW1lc1wvaW5iaW9cL3dwLWNvbnRlbnRcL3VwbG9hZHMifSwibm9uY2VzIjp7ImZsb2F0aW5nQnV0dG9uc0NsaWNrVHJhY2tpbmciOiJlMjEzYzEwMWI4In0sInN3aXBlckNsYXNzIjoic3dpcGVyIiwic2V0dGluZ3MiOnsicGFnZSI6W10sImVkaXRvclByZWZlcmVuY2VzIjpbXX0sImtpdCI6eyJhY3RpdmVfYnJlYWtwb2ludHMiOlsidmlld3BvcnRfbW9iaWxlIiwidmlld3BvcnRfdGFibGV0Il0sImdsb2JhbF9pbWFnZV9saWdodGJveCI6InllcyIsImxpZ2h0Ym94X2VuYWJsZV9jb3VudGVyIjoieWVzIiwibGlnaHRib3hfZW5hYmxlX2Z1bGxzY3JlZW4iOiJ5ZXMiLCJsaWdodGJveF9lbmFibGVfem9vbSI6InllcyIsImxpZ2h0Ym94X2VuYWJsZV9zaGFyZSI6InllcyIsImxpZ2h0Ym94X3RpdGxlX3NyYyI6InRpdGxlIiwibGlnaHRib3hfZGVzY3JpcHRpb25fc3JjIjoiZGVzY3JpcHRpb24ifSwicG9zdCI6eyJpZCI6Mzg4MCwidGl0bGUiOiJEZXZlbG9wZXIlMjBMaWdodCUyMCVFMiU4MCU5MyUyMEluQmlvIiwiZXhjZXJwdCI6IiIsImZlYXR1cmVkSW1hZ2UiOiExfX0=" defer></script>
         <script data-optimized="1" type="text/javascript" src="/js/a06d16a1b226672a0690297ea93ce8e5.js?ver=ce8e5" id="elementor-frontend-js" defer data-deferred="1"></script>
     </body>
-    
+    <script>
+        // Mini cart popup logic
+        document.addEventListener('DOMContentLoaded', function() {
+            var btn = document.getElementById('miniCartBtn');
+            var popup = document.getElementById('miniCartPopup');
+            if (btn && popup) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+                    // Hide after 2.5s
+                    if (popup.style.display === 'block') {
+                        setTimeout(function(){ popup.style.display = 'none'; }, 2500);
+                    }
+                });
+            }
+        });
+    </script>
+    </body>
+    <style>
+        .blinking-alfred {
+            animation: blink-color 1s infinite;
+            font-weight: bold;
+        }
+        @keyframes blink-color {
+            0% { color: green; }
+            50% { color: red; }
+            100% { color: green; }
+        }
+    </style>
 </html>
 <!-- Page optimized by LiteSpeed Cache @2026-03-18 18:51:34 -->
 <!-- Page cached by LiteSpeed Cache 7.7 on 2026-03-18 18:51:34 -->
