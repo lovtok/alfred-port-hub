@@ -222,8 +222,8 @@
                     arrows: !0,
                     cssEase: 'linear',
                     adaptiveHeight: !0,
-                    prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                    nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                    prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                    nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>',
                     responsive: [{
                         breakpoint: 1124,
                         settings: {
@@ -257,8 +257,8 @@
                 arrows: !0,
                 adaptiveHeight: !0,
                 cssEase: "linear",
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>',
                 responsive: [{
                     breakpoint: 768,
                     settings: {
@@ -279,8 +279,8 @@
                 arrows: !0,
                 adaptiveHeight: !0,
                 cssEase: "linear",
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>',
                 responsive: [{
                     breakpoint: 1200,
                     settings: {
@@ -296,8 +296,8 @@
                 arrows: !0,
                 cssEase: "linear",
                 adaptiveHeight: !0,
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>',
                 responsive: [{
                     breakpoint: 1124,
                     settings: {
@@ -328,8 +328,8 @@
                 arrows: !0,
                 cssEase: "linear",
                 adaptiveHeight: !0,
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>',
                 responsive: [{
                     breakpoint: 1124,
                     settings: {
@@ -360,8 +360,8 @@
                 slidesToShow: 3,
                 slidesToScroll: 1,
                 adaptiveHeight: !0,
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>',
                 responsive: [{
                     breakpoint: 1124,
                     settings: {
@@ -392,8 +392,8 @@
                 slidesToShow: 4,
                 slidesToScroll: 1,
                 adaptiveHeight: !0,
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>',
                 responsive: [{
                     breakpoint: 1124,
                     settings: {
@@ -423,8 +423,8 @@
                 dots: !0,
                 arrows: !0,
                 adaptiveHeight: !0,
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>',
             })
         },
         backToTopInit: function() {

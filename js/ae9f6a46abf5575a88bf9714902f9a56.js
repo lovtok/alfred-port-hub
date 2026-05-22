@@ -47,8 +47,8 @@
                 arrows: !0,
                 cssEase: 'linear',
                 adaptiveHeight: !0,
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>',
                 responsive: [{
                     breakpoint: 1124,
                     settings: {

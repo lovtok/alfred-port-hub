@@ -148,7 +148,7 @@
         }
         $this.addClass('loading').prop('disabled', !0);
         if (isLoadMore) {
-            $this.find('i').removeClass('feather-loader').addClass('feather-refresh-cw spinning')
+            $this.find('i').removeClass('bi-arrow-clockwise').addClass('feather-refresh-cw spinning')
         }
         $.ajax({
             type: 'POST',
@@ -188,7 +188,7 @@
             complete: function() {
                 $this.removeClass('loading').prop('disabled', !1);
                 if (isLoadMore) {
-                    $this.find('i').removeClass('feather-refresh-cw spinning').addClass('feather-loader')
+                    $this.find('i').removeClass('feather-refresh-cw spinning').addClass('bi-arrow-clockwise')
                 }
             }
         })

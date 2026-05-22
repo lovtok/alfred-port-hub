@@ -20684,7 +20684,7 @@ body.box-wrapper {
     z-index: -1
 }
 
-.backto-top i {
+. i {
     color: var(--color-primary);
     position: relative;
     z-index: 1;
@@ -21000,8 +21000,8 @@ body.box-wrapper {
     bottom: 10px
 }
 
-.is-expanded .expand-icon .feather-maximize-2:before {
-    content: "\e995"!important
+.is-expanded .expand-icon .bi-arrows-angle-expand:before {
+    content: "\F14A"!important
 }
 
 .rbt-intro-video-card-wrapper.is-expanded {

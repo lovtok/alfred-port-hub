@@ -42,8 +42,8 @@
     content: "\e905"
 }
 
-.feather-align-justify:before {
-    content: "\e906"
+.bi-menu-app:before {
+    content: "\F486"
 }
 
 .feather-align-left:before {
@@ -82,20 +82,20 @@
     content: "\e90f"
 }
 
-.feather-arrow-left:before {
-    content: "\e910"
+.bi-arrow-left:before {
+    content: "\F12F"
 }
 
 .feather-arrow-left-circle:before {
     content: "\e911"
 }
 
-.feather-arrow-right:before {
-    content: "\e912"
+.bi-arrow-right:before {
+    content: "\F138"
 }
 
-.feather-arrow-right-circle:before {
-    content: "\e913"
+.bi-arrow-right-circle:before {
+    content: "\F134"
 }
 
 .fa-arrow-up:before {
@@ -158,8 +158,8 @@
     content: "\e922"
 }
 
-.feather-book-open:before {
-    content: "\e923"
+.bi-book:before {
+    content: "\F194"
 }
 
 .feather-bookmark:before {
@@ -382,8 +382,8 @@
     content: "\e95a"
 }
 
-.feather-external-link:before {
-    content: "\e95b"
+.bi-box-arrow-up-right:before {
+    content: "\F1C5"
 }
 
 .feather-eye:before {
@@ -478,8 +478,8 @@
     content: "\e972"
 }
 
-.feather-grid:before {
-    content: "\e973"
+.bi-grid:before {
+    content: "\F3FC"
 }
 
 .feather-hard-drive:before {
@@ -494,8 +494,8 @@
     content: "\e976"
 }
 
-.feather-heart:before {
-    content: "\e977"
+.bi-heart:before {
+    content: "\F417"
 }
 
 .feather-help-circle:before {
@@ -506,16 +506,16 @@
     content: "\e979"
 }
 
-.feather-image:before {
-    content: "\e97a"
+.bi-image:before {
+    content: "\F42A"
 }
 
 .feather-inbox:before {
     content: "\e97b"
 }
 
-.feather-info:before {
-    content: "\e97c"
+.bi-info-circle:before {
+    content: "\F431"
 }
 
 .feather-instagram:before {
@@ -554,12 +554,12 @@
     content: "\e985"
 }
 
-.feather-loader:before {
-    content: "\e986"
+.bi-arrow-clockwise:before {
+    content: "\F116"
 }
 
-.feather-lock:before {
-    content: "\e987"
+.bi-lock:before {
+    content: "\F47B"
 }
 
 .feather-log-in:before {
@@ -586,8 +586,8 @@
     content: "\e98d"
 }
 
-.feather-maximize-2:before {
-    content: "\e98e"
+.bi-arrows-angle-expand:before {
+    content: "\F14A"
 }
 
 .fa-bars:before {
@@ -950,8 +950,8 @@
     content: "\e9e8"
 }
 
-.feather-tv:before {
-    content: "\e9e9"
+.bi-tv:before {
+    content: "\F5ED"
 }
 
 .fa-twitter:before {
@@ -970,8 +970,8 @@
     content: "\e9ed"
 }
 
-.feather-unlock:before {
-    content: "\e9ee"
+.bi-unlock:before {
+    content: "\F600"
 }
 
 .feather-upload:before {
@@ -1038,8 +1038,8 @@
     content: "\e9fe"
 }
 
-.feather-wifi:before {
-    content: "\e9ff"
+.bi-wifi:before {
+    content: "\F61C"
 }
 
 .feather-wifi-off:before {

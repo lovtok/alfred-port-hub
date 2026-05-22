@@ -136,7 +136,7 @@
             $(document).on('click', '.messonry-button .rn-btn', function(e) {
                 const $this = $(e.currentTarget);
                 const parent = $this.closest('.rn-portfolio-area');
-                parent.find('.rainbow-loadmore').removeClass('d-none').html('See More <i class="feather-loader"></i>').removeClass('disabled')
+                parent.find('.rainbow-loadmore').removeClass('d-none').html('See More <i class="bi bi-arrow-clockwise"></i>').removeClass('disabled')
             });
             let paged = 0;
             $('.loadmore').on('click', 'a.rainbow-loadmore', function(e) {
@@ -226,8 +226,8 @@
                 arrows: !0,
                 cssEase: 'linear',
                 adaptiveHeight: !0,
-                prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>',
                 responsive: [{
                     breakpoint: 1124,
                     settings: {
@@ -267,8 +267,8 @@
                     slidesToShow: 3,
                     slidesToScroll: 1,
                     adaptiveHeight: !0,
-                    prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                    nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                    prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                    nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>',
                     responsive: [{
                         breakpoint: 1124,
                         settings: {
@@ -309,8 +309,8 @@
                     slidesToShow: 4,
                     slidesToScroll: 1,
                     adaptiveHeight: !0,
-                    prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                    nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                    prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                    nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>',
                     responsive: [{
                         breakpoint: 1124,
                         settings: {
@@ -349,8 +349,8 @@
                     arrows: !0,
                     adaptiveHeight: !0,
                     cssEase: 'linear',
-                    prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                    nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>',
+                    prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                    nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>',
                     responsive: [{
                         breakpoint: 1200,
                         settings: {
@@ -376,8 +376,8 @@
                     arrows: !0,
                     adaptiveHeight: !0,
                     cssEase: 'linear',
-                    prevArrow: '<button class="slide-arrow prev-arrow"><i class="feather-arrow-left"></i></button>',
-                    nextArrow: '<button class="slide-arrow next-arrow"><i class="feather-arrow-right"></i></button>'
+                    prevArrow: '<button class="slide-arrow prev-arrow"><i class="bi bi-arrow-left"></i></button>',
+                    nextArrow: '<button class="slide-arrow next-arrow"><i class="bi bi-arrow-right"></i></button>'
                 })
             }
         }
